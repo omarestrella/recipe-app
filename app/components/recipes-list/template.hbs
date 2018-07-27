@@ -1,0 +1,17 @@
+<div class="add-new">
+  {{#link-to "recipes.create"}}
+    Add New Recipe
+  {{/link-to}}
+</div>
+
+<div class="recipes">
+  {{#each recipes as |recipe|}}
+    <div class="recipe">
+      {{#link-to "recipes.detail" recipe.id}}
+        {{recipe.name}}
+      {{/link-to}}
+    </div>
+  {{/each}}
+</div>
+
+

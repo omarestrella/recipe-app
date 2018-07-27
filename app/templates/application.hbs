@@ -1,5 +1,9 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+{{#navbar-header}}
+  Header
+{{/navbar-header}}
 
-{{outlet}}
+<div class="application-container
+  {{currentRouteClass}}
+  {{if application.developmentMode 'development'}}">
+  {{outlet}}
+</div>

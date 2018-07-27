@@ -1,0 +1,54 @@
+form {
+  width: 100%;
+
+  .form-container {
+    display: flex;
+    width: 100%;
+
+    label {
+      width: 40%;
+      max-width: 200px;
+    }
+
+    input, textarea, select {
+      flex: 1;
+      max-width: 300px;
+    }
+  }
+
+  .ingredients {
+    margin: 0 0 20px 0;
+
+    table {
+      width: 100%;
+
+      thead {
+        th {
+          text-align: left;
+        }
+
+        .number {
+          width: 18%;
+        }
+
+        .name {
+          width: 60%;
+        }
+
+        .measurement {
+          width: 18%;
+        }
+
+        .remove {
+          width: 4%;
+        }
+      }
+
+      tbody {
+        td:last-child {
+          text-align: right;
+        }
+      }
+    }
+  }
+}

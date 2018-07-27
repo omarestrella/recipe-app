@@ -6,7 +6,21 @@ import config from './config/environment';
 const App = Application.extend({
   modulePrefix: config.modulePrefix,
   podModulePrefix: config.podModulePrefix,
-  Resolver
+  Resolver,
+
+  init() {
+    this._super(...arguments);
+
+    window.App = this;
+  },
+
+  controllerFor(name) {
+    return this.__container__.lookup(`controller:${name}`);
+  },
+
+  serviceFor(name) {
+    return this.__container__.lookup(`service:${name}`);
+  }
 });
 
 loadInitializers(App, config.modulePrefix);

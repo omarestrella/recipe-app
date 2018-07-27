@@ -1,0 +1,57 @@
+<form onsubmit={{action "save"}}>
+  <div class="form-container">
+    <input placeholder="Name" oninput={{action "updateProperty" "name"}}>
+  </div>
+
+  <div class="form-container">
+    <input placeholder="Description" oninput={{action "updateProperty" "description"}}>
+  </div>
+
+  <div class="form-container">
+    <input placeholder="URL" oninput={{action "updateProperty" "url"}}>
+  </div>
+
+  <div class="ingredients">
+    <h4>
+      Ingredients
+      <small>
+        <button type="button" {{action "addIngredient"}}>
+          Add +
+        </button>
+      </small>
+    </h4>
+
+    <table>
+      <thead>
+        <th class="number">
+          Number
+        </th>
+        <th class="name">
+          Name
+        </th>
+        <th class="measurement">
+          Measure
+        </th>
+        <th class="remove">
+
+        </th>
+      </thead>
+      <tbody>
+        {{#each ingredients as |ingredient|}}
+          <tr>
+            <td>1</td>
+            <td>Chicken</td>
+            <td>n/a</td>
+            <td>x</td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+
+  <div>
+    <button type="submit" {{action "save"}}>
+      Save
+    </button>
+  </div>
+</form>
