@@ -38,12 +38,7 @@
       </thead>
       <tbody>
         {{#each ingredients as |ingredient|}}
-          <tr>
-            <td>1</td>
-            <td>Chicken</td>
-            <td>n/a</td>
-            <td>x</td>
-          </tr>
+          {{new-recipe-form/ingredient-entry ingredient=ingredient}}
         {{/each}}
       </tbody>
     </table>
