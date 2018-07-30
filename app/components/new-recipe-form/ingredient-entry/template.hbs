@@ -5,6 +5,10 @@
   <input type="text">
 </td>
 <td>
-  <select></select>
+  <select>
+    {{#each measurementChoices as |choice|}}
+      <option>{{choice}}</option>
+    {{/each}}
+  </select>
 </td>
 <td>x</td>
